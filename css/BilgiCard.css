@@ -1,0 +1,47 @@
+ /* BİLGİ KARTLARI */
+ .info-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    list-style-type: none;
+    background-color: rgb(237, 243, 250);
+  }
+  
+  .info-card-container li {
+    background-color: #ffffff9a;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+    min-width: 150px;
+    max-width: 200px;
+  }
+  
+  .info-card-container h2 {
+    color: #355592;
+    font-size: 2em;
+  }
+  
+  .info-card-container h3 {
+    color: #333333;
+    font-size: 1.2em;
+  }
+  
+
+  /* Responsive ayarlar */
+@media (max-width: 577px) {
+  .info-card-container {
+    flex-direction: column; /* Kutuları alt alta diz */
+    align-items: center; /* Kutuları ortala */
+    padding: 10px; /* Kenar boşluklarını artır */
+  }
+
+  .info-card-container li {
+    margin: 10px 0; /* Kutular arasına boşluk ekle */
+    width: 90%; /* Kutuların genişliğini %90 yap */
+    height: 200px; /* Yüksekliği responsive görünümde artır */
+    padding: 30px; /* Kutu içindeki boşluğu artır */
+  }
+}

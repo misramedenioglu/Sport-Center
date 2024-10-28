@@ -1,0 +1,111 @@
+
+/* BMI */
+.bmi-container {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    gap: 10%;
+    padding-bottom: 2rem;
+  }
+  
+  .calculate-container {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .calculate-container h1 {
+    color: #355592;
+    font-weight: 800;
+    text-align: left;
+  }
+  
+  .calculate-container p {
+    font-weight: 700;
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .calculate-container .input-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px; /* Inputlar arasındaki boşluğu ayarlar */
+    
+  }
+  
+  .calculate-container input {
+    width: 100px; /* Input genişliğini sabitlemek için ekledik */
+    padding: 4px;
+    border-radius: 3px;
+    border: 2px solid rgba(0, 0, 0, 0.342);
+    text-align: center;
+  }
+  
+  
+  .BMI-img{
+    width: 100%;
+  }
+  
+  .BMI-img-container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top: 0;
+    border-bottom: 30px solid #f39f15;
+    left: 6%;
+  }
+
+
+  @media (max-width: 576px) {
+    .bmi-container {
+      display: block;
+      flex-direction: column; /* Dikey hizalama */
+      width: 100%; /* Genişlik %100 */
+      gap: 20px; /* Elemanlar arasında boşluk */
+    }
+
+    .calculate-container {
+      width: 100%; /* Genişliği %100 yap */
+      margin-bottom: 70px; /* Margin kaldır  !!!!! */
+      text-align: left; /* Metin ortalama */
+
+    }
+
+    .calculate-container h1 {
+      margin: 20px;
+      font-size: 30px;
+      margin-left: 30px;
+    }
+
+    .calculate-container p {
+      margin: 20px 0; /* Üst ve alt boşluk */
+      
+      margin-left: 20px;
+      
+    }
+
+    .calculate-container input {
+      width: 50%; /* Giriş alanları genişliği */
+      margin: 10px;
+      justify-content: start;
+      margin-left: 30px;
+    }
+
+    .BMI-img-container {
+      width: 200%; /* Resim alanı genişliği */
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .BMI-img {
+      width: 100%; /* Resim %100 genişlik */
+    }
+  }
+  

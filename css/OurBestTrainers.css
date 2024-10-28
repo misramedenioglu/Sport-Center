@@ -1,0 +1,195 @@
+/* OUR BEST TRAINERS */
+
+.section-title h2{
+    padding-top: 2rem;
+    text-align: center;
+    color: #355592;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .section-title p {
+    text-align: center;
+    color: #333333;
+  }
+  
+  
+  #trainers .container {
+    flex-direction: column;
+    padding: 0 160px; /**/
+  }
+  
+  #trainers .images {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .img-container {
+    position: relative;
+    display: inline-block;
+    
+    /* Hover olduğunda çizgilerin tam çerçeve oluşturması */
+    &:hover {
+        .outer-frame {
+            &::after{
+                width: 80%;
+                left: 24px;
+                right: 24px;
+            }
+        }
+        .outer-frame .side.left {
+            height: 50%;
+            bottom: 16px;
+        }
+        .outer-frame .side.right {
+            height: 50%;
+            bottom: 16px;
+        }
+        .img-content {
+            bottom: 16px;
+            opacity: 1;
+        }
+    }
+  }
+  
+  .our-img {
+    width: 300px;
+    height: 350px;
+    border: 2px solid #f39f15;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .outer-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 350px;
+    border: none;
+  
+    &::before,&::after {
+        content: '';
+        position: absolute;
+        background-color:#355592;
+        transition: all 0.5s ease;
+    }
+  }
+  
+  /* Üst çizgi */
+  .outer-frame::before {
+    width: 80px;
+    height: 8px;
+    top: -8px;
+    left: calc(50% - 40px);
+  }
+  
+  /* Alt çizgi*/
+  .outer-frame::after {
+    width: 80px;
+    height: 8px;
+    bottom: -8px;
+    left: calc(50% - 40px);
+  }
+  
+  /*sol ve sağ çizgiler için side ile konum ve renk tanımlaması*/
+  .outer-frame .side {
+    position: absolute;
+    background-color:#355592;
+    transition: all 0.5s ease;
+  }
+  
+  /* Sol ve sağ çizgi */
+  .outer-frame .side.left {
+    width: 8px;
+    height: 120px;
+    left: -8px;
+    top: calc(50% - 60px);
+  }
+  
+  .outer-frame .side.right {
+    width: 8px;
+    height: 120px;
+    right: -8px;
+    top: calc(50% - 60px);
+  }
+  
+  .img-content {
+    color:#e5e7eb;
+    position: absolute;
+    left: 16px;
+    width: 268px;
+    bottom: 0;
+    padding: 24px 8px;
+    text-align: center;
+    background-color:#355592;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    opacity: 0;
+    transition: all 250ms linear;
+  }
+  
+  .img-content p {
+    color:#fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+  
+
+ /* RESPONSİVE AYARLARI */
+@media (max-width: 576px) {
+  #trainers .container {
+      padding: 0 15px; /* Yan boşlukları ayarla */
+      flex-direction: column; /* Dikey düzenleme */
+      align-items: center; /* Ortala */
+  }
+
+  .section-title h2 {
+      font-size: 1.8rem; /* Başlık boyutunu ayarla */
+      text-align: center; /* Başlığı ortala */
+  }
+
+  .section-title p {
+      text-align: center; /* Paragrafı ortala */
+      width: 100%; /* Tam genişliği kullan */
+      margin: 1rem 0; /* Üst ve alt boşluk ekle */
+  }
+
+  #trainers .images {
+      display: flex; /* Flexbox kullan */
+      flex-direction: column; /* Dikey düzenleme */
+      align-items: center; /* Ortala */
+      margin-top: 40px;
+      gap: 30px;
+  }
+
+  .img-container {
+      margin-bottom: 20px; /* Kartlar arasında boşluk ekle */
+      position: relative;
+      width: 100%; /* Kart genişliğini ayarla */
+      max-width: 300px; /* Maksimum genişlik */
+  }
+
+  .our-img {
+      width: 100%; /* Resim genişliğini ayarla */
+      height: auto; /* Yükseklik otomatik */
+  }
+
+  .outer-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; /* Çerçevenin genişliğini ayarla */
+      height: 100%; /* Çerçevenin yüksekliğini ayarla */
+  }
+
+  .img-content {
+      width: 100%; /* İçeriğin genişliğini ayarla */
+      margin-bottom: 20px;
+      left: 0; /* İçeriği merkezde tut */
+      padding: 24px 8px; /* İçerik padding ayarları */
+  }
+}

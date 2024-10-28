@@ -1,0 +1,251 @@
+#home {
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Navbar genel yapısı */
+  .nav-scroll {
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 20px;
+    position: fixed;
+    width: 100%;
+    background-color: #355592;
+  }
+  
+  /* Varsayılan durumda şeffaf yap */
+  .nav-scroll.transparent {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Navbar içindeki logo ve menü düzeni */
+  .nav-div-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  /* Menü yapısı */
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+  }
+  
+  .nav-ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-ul a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-ul a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Buton stili */
+  .button {
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* İçerik bölümü stili */
+  .content-container {
+    background-image: url('hero-man.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+  }
+  
+  .content-container-text {
+    padding: 200px 0;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  .content-container h3 {
+    background-color: #101111b4;
+  }
+  
+  .content-container h1 {
+    display: inline;
+    margin-top: 22px;
+    padding: 8px 10px;
+    background-color: #355592;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .content-container h2 {
+    font-size: 70px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .content-container h3 {
+    margin-bottom: 10px;
+  }
+  
+  .content-container p {
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    gap: 30px;
+    margin-top: 30px;
+    width: 60%;
+  }
+  
+  .button-1 {
+    background-color: #355592;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .button-1:hover {
+    background-color: #2a4173;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .button-2 {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #355592;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .button-2:hover {
+    background-color: rgba(53, 85, 146, 0.1);
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+
+  
+  @media (max-width: 576px) {
+
+    /* Hamburger menü simgesinin görünümü */
+    .hamburger {
+      display: flex; /* Hamburger simgesini göster */
+      cursor: pointer; /* İmleci göster */
+  }
+
+  /* Navbar listesinin ayarları */
+  .nav-ul {
+      display: none; /* Varsayılan olarak gizle */
+      flex-direction: column; /* Dikey dizilim */
+      position: absolute; /* Mutlak konumlandırma */
+      top: 60px; /* Navbarın hemen altında */
+      left: 0; /* Soldan başla */
+      width: 100%; /* Tam genişlik */
+      background-color: rgba(53, 85, 146, 0.8); 
+      z-index: 999; /* Üstte kalmasını sağla */
+      padding: 10px 0; /* Üst ve alt boşluk */
+      margin-top: 20px;
+  }
+
+  /* Menü açıldığında görünür olacak ayar */
+  .nav-ul.active {
+      display: flex; /* Aktif olduğunda göster */
+  }
+
+  /* Menü öğeleri için ayarlar */
+  .nav-ul li {
+      margin: 10px 0; /* Liste elemanları arasında boşluk */
+      text-align: center; /* Metin ortalanır */
+  }
+
+  /* Bağlantı ayarları */
+  .nav-ul a {
+      color: white; /* Yazı rengi beyaz */
+      text-decoration: none; /* Alt çizgi kaldırılır */
+      padding: 10px 15px; /* İçerik için boşluk */
+      display: block; /* Tüm alanı kapsar */
+  }
+
+  .content-container-text {
+    padding: 10px; 
+    width: 100%; /* Tam genişlik sağlamak için */
+    margin: 10px; /* Margin kaldırıldı */
+    color: white;
+    margin-bottom: 30px;
+}
+    .content-container h1,
+    .content-container h2,
+    .content-container h3 {
+        text-align: left; /* Başlıkları sola hizala */
+        margin: 0; /* Başlıkların altına boşluk ekle */
+        width: 100%;
+    }
+
+    .button-container {
+      gap: 30px;
+      margin-top: 30px;
+      width: 100%; /* Tam genişlik sağlamak için */
+  }
+
+  .button-1, .button-2 {
+    width: 100%; /* Tam genişlik sağlamak için */
+    margin: 0; /* Margin kaldırıldı */
+    padding: 10px 0; /* İsteğe bağlı: sadece dikey padding */
+}
+}

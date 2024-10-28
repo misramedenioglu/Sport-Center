@@ -1,0 +1,88 @@
+/*PURCHASE FROM US KISMI*/
+.cls-purchase{
+    position: relative;
+    text-align: center; 
+    padding: 50px 0;
+  }
+  
+  .purchase-section{
+    margin-bottom: 30px;
+  }
+  
+  .purchase-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding: 0;
+    color: #355592;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .purchase-section p {
+    color: #333333;
+    margin: 10px 0;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .purchase-card-contanier {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* ekran daraldığında alt alta dizilsin*/
+    gap: 20px;
+  }
+  
+  .purchase-card {
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 20px 30px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .purchase-card img {
+    width: 120%;
+    height: auto;
+    
+  }
+  
+  .purchase-layer {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .purchase-layer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .purchase-layer p {
+    
+    margin-bottom: 15px;
+  }
+  
+  .price a {
+    display: inline-flex;
+    align-items: center;
+    color:#355592;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .price i {
+    margin-right: 20px;
+  }
+  
+  
+  /* RESPONSİVE AYARLARI */
+@media (max-width: 576px) {
+  .purchase-card-contanier {
+      flex-direction: column; /* Kartları dikey olarak sırala */
+      align-items: center; /* Kartları ortala */
+  }
+
+  .purchase-card {
+      width: 100%; /* Kart genişliğini tam yap */
+      max-width: 300px; /* Maksimum genişlik belirle */
+  }
+}

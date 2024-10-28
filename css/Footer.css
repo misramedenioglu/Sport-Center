@@ -1,0 +1,104 @@
+/*FOOTER KSMI*/
+/* Footer stilini ayarlıyoruz */
+footer {
+    background-color: #355592; /* Arka plan rengi */
+    padding: 40px 0; /* Üst ve alt boşluk */ 
+  }
+  
+  /* Footer container merkezde hizalanacak */
+  .footer-container {
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto; /* Sayfada ortalanması için */
+  }
+  
+  /* Logo ve metin hizalaması */
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column; /* Elemanları alt alta sıralıyoruz */
+    align-items: flex-start; /* Soldan hizalanacak şekilde ayarlıyoruz */
+    justify-content: center; /* Dikeyde ortalıyoruz */
+    padding-left: 200px; /* Soldan boşluk ekledik */
+  }
+  
+  .footer-logo {
+    max-width: 150px; /* Logo boyutu */
+    margin-bottom: 10px; /* Logo ve metin arasına boşluk */
+  }
+  
+  .footer-logo-section p {
+    color: #fff; /* Yazı rengi beyaz */
+    font-size: 14px;
+    line-height: 1.6; /* Satır yüksekliği */
+    max-width: 770px; /* Metin genişliği sınırlandırıldı */
+    margin: 0; /* Ekstra boşluk kaldırıldı */
+  }
+  
+
+  /* Information bölümü stili */
+.footer-info-container {
+    display: flex; /* Yan yana hizalamak için flex kullanıyoruz */
+    justify-content: center; /* Ortalıyoruz */
+    gap: 40px; /* Sütunlar arasında boşluk */
+    margin: 10px 0; /* Üst ve alt boşluk */
+    padding: 0 20px; /* Sağ ve soldan boşluk ekliyoruz */
+  }
+  
+  .footer-section {
+    border-radius: 5px; /* Köşeleri yuvarlatıyoruz */
+    padding: 20px; /* İçerik için boşluk */
+    flex-basis: 30%; /* Her sütunun genişliği %30 */
+    max-width: 300px; /* Maksimum genişlik ayarı */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px; /* Başlık ile içerik arasında boşluk */
+    color: #fff; /* Başlık rengi */
+    font-size: 23px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none; /* Liste noktalarını kaldırıyoruz */
+    padding: 0; /* Padding kaldırıldı */
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px; /* Liste elemanları arasında boşluk */
+  }
+  
+  .footer-section ul li a {
+    color: #fff; /* Bağlantı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırıyoruz */
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline; /* Üzerine gelince altı çizili olur */
+  }
+  
+  
+  @media (max-width: 576px) {
+    .footer-container {
+        flex-direction: column; /* Ana konteyneri dikey olarak hizala */
+        align-items: flex-start; /* Soldan hizala */
+    }
+
+    .footer-logo-section {
+        text-align: left; /* Soldan hizala */
+        padding-left: 10px; /* Soldan boşluğu kaldır */
+    }
+
+    .footer-info-container {
+        display: flex; /* Yan yana dizilmeye devam et */
+        justify-content: space-between; /* Aralarındaki boşluğu eşit dağıt */
+        width: 100%; /* Tam genişlik */
+        padding: 0; /* Padding kaldır */
+        gap: 40px; /* Boşluk ekle */
+    }
+
+    .footer-section {
+        flex-basis: 50%; /* Her bölüm %50 genişlikte */
+        max-width: 300px; /* Maksimum genişliği sınırlandır */
+        margin-bottom: 20px; /* Altına boşluk ekle */
+    }
+}
+

@@ -1,0 +1,128 @@
+/* REVİEW CLIENT KISMI */
+.review {
+    position: relative;
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgb(237, 243, 250);
+  }
+  
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .review-section {
+    margin-bottom: 30px;
+    margin: auto;
+    width: 60%;
+  }
+  
+  .review-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding: 0;
+    color: #355592;
+  }
+  
+  .review-section p {
+    color: #333333;
+    margin: 10px 0;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .clients {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .client-container {
+    
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    padding: 100px; /**/
+  }
+  
+  .client {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  
+  .client img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .client-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .client-details p {
+    margin: 0;
+  }
+  
+  .client-comment {
+    position: relative;
+    text-align: start;
+    padding: 0 16px;
+    font-size: 14px;
+    color: white;
+    background-color:#355592;
+    margin: 10px;
+  }
+  
+  .client-comment p{
+    font-size: 16px;
+    padding: 20px; 
+  }
+  
+  .triangle-1{
+    position: absolute;
+    right: 0px;
+    bottom:-40px;
+    width: 40px;
+    height: 40px;
+    background-color:#355592;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  .triangle-2{
+    position: absolute;
+    left: 0px;
+    bottom:-40px;
+    width: 40px;
+    height: 40px;
+    background-color:#355592;
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+  }
+
+
+  /* RESPONSİVE AYARLARI */
+@media (max-width: 576px) {
+  .clients {
+      flex-direction: column; /* Kartları dikey olarak sırala */
+      align-items: center; 
+  }
+
+  .client-container {
+      margin: 20px 0; /* Üst ve alt boşluk ver */
+      padding: 0; /* Padding'i sıfırla */
+  }
+
+  .client {
+      text-align: start; /* Yazıyı ortala */
+      padding-left: 20px;
+  }
+
+  .client-comment{
+    padding: 20px;
+  }
+    
+  
+}

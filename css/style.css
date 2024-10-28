@@ -1,0 +1,14 @@
+/* Sayfanın genel ayarları */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+::selection{ /*metin seçerken renk değişir.*/
+  color:white;
+  background-color: #e6b800;
+}
