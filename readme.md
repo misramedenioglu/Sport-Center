@@ -22,6 +22,6 @@ This project features a modern and responsive design that showcases various fitn
 
 ## How to Run the Project
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/sports-center-website.git
+1. **Live Link**
+
+https://sport-center-m.netlify.app/
